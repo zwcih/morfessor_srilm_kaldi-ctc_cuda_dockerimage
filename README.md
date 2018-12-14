@@ -7,6 +7,8 @@ This is a docker image with several speech/NLP/DL packages:
 - Ubuntu 16.04
 - CUDA 8.0 + CUDNN 5.0
 - Kaldi-ctc
+- SRILM
+- Morfessor
 - and other dependency packages
 
 This docker image can be used to do some speech and NLP tasks with GPU support.
@@ -30,4 +32,4 @@ Linux, CUDA supported GPU, docker, nvidia-docker
 
 ## Contact
 
-zwcih@qq.com for any comments/feedbacks
+Please send mails to zwcih@qq.com for any comments/feedbacks
