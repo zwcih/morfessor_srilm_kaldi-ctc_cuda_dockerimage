@@ -2,7 +2,7 @@ FROM nvidia/cuda:8.0-cudnn5-devel-ubuntu16.04
 LABEL maintainer "Wayne Zhang <zwcih@qq.com>"
 
 RUN apt-get -y update
-RUN apt-get -y install python python-pip gcc-4.9 g++-4.9 automake autoconf wget subversion libatlas3-base git cmake gfortran-4.9 zlib1g-dev libtool
+RUN apt-get -y install python python-pip gcc-4.9 g++-4.9 automake autoconf wget subversion libatlas3-base git cmake gfortran-4.9 zlib1g-dev libtool vim
 
 # make gcc/g++ 4.9 as default
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
