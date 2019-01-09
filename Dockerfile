@@ -22,3 +22,6 @@ ENV PATH $PATH:/lm/dependencies/srilm/bin/i686-m64:/lm/dependencies/srilm/bin
 RUN cd /lm/ && git clone https://github.com/lingochamp/kaldi-ctc.git
 RUN cd /lm/kaldi-ctc/tools && ln -s -f bash /bin/sh && make -j && make openblas
 RUN cd /lm/kaldi-ctc/src && ./configure --cudnn-root=/usr/ && make depend && make
+RUN chmod 755 /lm/kaldi-ctc/tools/openfst-*
+ENV KALDI_ROOT /lm/kaldi-ctc
+ENV PATH $PATH:$KALDI_ROOT/egs/wsj/s5/utils:$KALDI_ROOT/tools/openfst/bin
